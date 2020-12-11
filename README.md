@@ -11,10 +11,10 @@ It is up-to-date as of 11 December 2020. For queries contact Falko Buschke `falk
 
 This repository is made up of three files:
 
-* `Conceptual diagram.R`
+* `Conceptual_diagram.R`
 This contains the R-code needed to replicate the conceptual diagrams in Figure 1 and Figure S1
 
-* `MCT coexistence biplots.R`
+* `MCT_coexistence_biplots.R`
 This include the R-code needed to replicate Figures 2 and 3 in the main manuscript, which show the equalising and stabilising components of pair-wise coexistence of species. Relies on data from the data file `Isotope_data.txt`
 
 * `Isotope_data.txt`
