@@ -27,10 +27,10 @@ labs <- c("Jun 2004","Jul 2004","Aug 2004","Sept 2004",
 	"Oct 2004","Nov 2004","Dec 2004", "Jan 2005", "Feb 2005", "Mar 2005",
 	"Apr 2005", "May 2005")
 
-# The colour palette to be used for pais of species
+# The colour palette to be used for pairs of species
 cols <- colorRampPalette(c(rgb(0,0,0.5,0.25),rgb(0,0.8,0.8,0.25),rgb(1,0.5,0,0.25)),interpolate="linear")(10)
 
-# Names of species pairs. We us the common names, but scientific names are included in dataset
+# Names of species pairs. We use the common names, but scientific names are included in dataset
 pairs <- c("Impala vs. Wildebeest",
 	"Impala vs. Zebra",
 	"Impala vs. Giraffe",
