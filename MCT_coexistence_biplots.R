@@ -184,11 +184,11 @@ box()
 # This is a line plot to link months in sequential order
 plot(apply(STAB,2,mean),apply(FIT,2,function(x){exp(mean(log(x)))}), 
 	ylab="Mean fitness ratio",xlab="Mean niche overlap",
-	las=1,col="grey", type="l",ylim=c(0.0,0.8), xlim=c(0,0.31),
-	, cex.axis=1.1, cex.lab= 1.3,mgp=c(2.4,0.6,0))
+	las=1,col="grey", type="l",ylim=c(0.1,0.37), xlim=c(0,0.31),
+	, cex.axis=1.1, cex.lab= 1.3,mgp=c(2.6,0.6,0))
 
 # Add the polygon for the coexistence zone
-polygon(c(-0.1,1,-0.1),c(1,1,-0.1),col=rgb(0,0,0,0.05), border=F)
+polygon(c(-0.1,1,-0.1),c(1,1,-0.1),col=rgb(0,0,0,0.075), border=F)
 
 # Add the points for each month. I add them twice, once for the colour scale, and once for the boundary
 points(apply(STAB,2,mean),apply(FIT,2,function(x){exp(mean(log(x)))}), 
@@ -198,7 +198,7 @@ points(apply(STAB,2,mean),apply(FIT,2,function(x){exp(mean(log(x)))}),
 
 # Annotate the points with labels
 text(apply(STAB,2,mean),apply(FIT,2,function(x){exp(mean(log(x)))}), 
-	pos=c(3,1,4,2,1,2,2,3,4,4,3,1),labs,cex=0.9)
+	pos=c(1,3,2,1,3,3,1,3,1,3,1,1),labs,cex=0.7)
 
 # Label the plot
 mtext("(b)",cex=1.8, side = 3, adj = 0.05, line = -2)
