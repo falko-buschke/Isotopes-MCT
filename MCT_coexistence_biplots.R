@@ -182,22 +182,23 @@ box()
 
 # Plot the average stabilisation and equalisation components from the loop used for Figure 2
 # This is a line plot to link months in sequential order
-plot(apply(STAB,2,mean),apply(FIT,2,function(x){exp(mean(log(x)))}), 
-	ylab="Mean fitness ratio",xlab="Mean niche overlap",
-	las=1,col="grey", type="l",ylim=c(0.1,0.37), xlim=c(0,0.31),
+plot(apply(STAB,2,mean),apply(FIT,2,function(x){mean(log(x))}), 
+	ylab="ln Mean fitness ratio",xlab="Mean niche overlap",
+	las=1,col="grey", type="l",ylim=c(-2.1,-1), xlim=c(0,0.31),
 	, cex.axis=1.1, cex.lab= 1.3,mgp=c(2.6,0.6,0))
 
 # Add the polygon for the coexistence zone
-polygon(c(-0.1,1,-0.1),c(1,1,-0.1),col=rgb(0,0,0,0.075), border=F)
+p <- seq(0,1,l=1000); ll <- log(p); ul <- log(1/p)
+polygon(c(p,rev(p)),c(ul,rev(ll)), border=F,col=rgb(0,0,0,0.075))
 
 # Add the points for each month. I add them twice, once for the colour scale, and once for the boundary
-points(apply(STAB,2,mean),apply(FIT,2,function(x){exp(mean(log(x)))}), 
+points(apply(STAB,2,mean),apply(FIT,2,function(x){mean(log(x))}), 
 	pch=16,col=colss[ceiling(cumRain[1:13])],cex=1.4)
-points(apply(STAB,2,mean),apply(FIT,2,function(x){exp(mean(log(x)))}), 
+points(apply(STAB,2,mean),apply(FIT,2,function(x){mean(log(x))}), 
 	pch=1,cex=1.4)
 
 # Annotate the points with labels
-text(apply(STAB,2,mean),apply(FIT,2,function(x){exp(mean(log(x)))}), 
+text(apply(STAB,2,mean),apply(FIT,2,function(x){mean(log(x))}), 
 	pos=c(1,3,2,1,3,3,1,3,1,3,1,1),labs,cex=0.7)
 
 # Label the plot
