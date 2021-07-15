@@ -27,6 +27,6 @@ The `Isotope_data.txt` dataset includes multiple columns gnerated from stable is
   * `BM_i` and `BM_j`, which is the body mass of species *i* and *j* respectively.
   * `Rmax_i` and `Rmax_j`, which is the maximum grwoth rate of species *i* and *j* respectively.
   * `SEAi_mean` and `SEAj_mean`, which is the total dieatary nice of species *i* and *j* respectively (I and J).
-  * `Olap` is the nice overlap between the pair of species (I *interesect* J)
+  * `Olap` is the niche overlap between the pair of species (I *interesect* J)
   
 
